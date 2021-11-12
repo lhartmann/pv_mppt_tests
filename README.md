@@ -7,7 +7,7 @@ A set of programs to test PV modules and MPPT techniques. This set of programs w
     * Phisical generators wired to KEPCO BOP power supplies, cotrolled via SCPI serial.
     * Simulated generators based on stimuli and models.
   * Logs Isc and Voc, for environmental profiling and stimuli generation.
-  * Can run multiple MPPT technique variaton on physical/simulated PV generators.
+  * Can run multiple MPPT technique variatons on physical/simulated PV generators.
 * `dat2mat`: Converts text-based data files to binary Matlab format, for size and speed improvements.
 * `genstim`: Creates G and T profiles from measured Isc and Voc curves.
 * `gentbl`: Creates error tables for validating MPPT techniques.
@@ -28,6 +28,8 @@ cd build
 cmake ..
 make -j
 ```
+
+You can obviously run locally on a linux box. Build should be easy as there are pretty much no external dependencies.
 
 # Running
 
