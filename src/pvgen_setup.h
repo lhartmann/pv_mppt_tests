@@ -24,7 +24,7 @@
 #include "pvgen_models.h"
 #include "pvgen_nominal_model.h"
 
-inline void pvgen_setup(pvGenerator &gen, const pvgen_model_parameters_t &m) {
+inline void pvgen_setup(pvGenerator &gen, const pvGenerator::model_parameters_t &m) {
 	gen.setSeriesCellCount(m.Ns);
 	gen.setSourceReference(m.Iph, m.G);
 	gen.setDiodeModel(m.I0, m.T, m.m);
@@ -33,7 +33,7 @@ inline void pvgen_setup(pvGenerator &gen, const pvgen_model_parameters_t &m) {
 	gen.setIterationParameters(1000, 1e-5);
 }
 
-inline void pvgen_setup(pvGenerator &gen, const pvgen_nameplate_parameters_t &n) {
+inline void pvgen_setup(pvGenerator &gen, const pvGenerator::nameplate_parameters_t &n) {
 	pvgen_setup(gen, pvgen_nominal_model(n));
 }
 

@@ -21,17 +21,17 @@
 #include <cstring>
 
 class pvgen_parameters_loader_t {
-	pvgen_parameters_t *generators;
+	pvGenerator::parameters_t *generators;
 public:
 	pvgen_parameters_loader_t();
 	~pvgen_parameters_loader_t();
 };
 
-const pvgen_parameters_t *generators = 0;
+const pvGenerator::parameters_t *generators = 0;
 static pvgen_parameters_loader_t loader;
 
 pvgen_parameters_loader_t::pvgen_parameters_loader_t() {
-	generators = new pvgen_parameters_t[GEN_COUNT];
+	generators = new pvGenerator::parameters_t[GEN_COUNT];
 	if (!generators) return;
 	
 	// Kyocera KC130TM
@@ -133,7 +133,7 @@ pvgen_parameters_loader_t::~pvgen_parameters_loader_t() {
 	}
 }
 
-const pvgen_parameters_t *generator_by_name(const char *name) {
+const pvGenerator::parameters_t *generator_by_name(const char *name) {
 	for (int i=0; generators[i].name; ++i) {
 		if (!std::strcmp(name, generators[i].name)) {
 			return &generators[i];

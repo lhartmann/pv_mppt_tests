@@ -357,7 +357,7 @@ int main(int argc, const char *argv[]) {
 	if (iPID) pidfile.create(argv[iPID], iQuiet ? 0 : &cout);
 	
 	// Select generator model
-	const pvgen_parameters_t *genparam=0;
+	const pvGenerator::parameters_t *genparam=0;
 	if (true) {
 		// Specified on command-line
 		if (generator_model) {
@@ -379,7 +379,7 @@ int main(int argc, const char *argv[]) {
 	// Prepare MPP trackers
 	cout<<"Preparing MPPT trackers ("<<genparam->name<<")... "<<flush;
 	if (true) {
-		pvgen_model_parameters_t m = pvgen_nominal_model(genparam->nameplate);
+		pvGenerator::model_parameters_t m = pvgen_nominal_model(genparam->nameplate);
 		m.Rs += 0.16;
 		track_mlamhf.dVr        = 0.01;
 		

@@ -22,8 +22,8 @@
 
 #include "pvgen.h"
 
-extern const pvgen_parameters_t *generators;
-extern const pvgen_parameters_t *generator_by_name(const char *name);
+extern const pvGenerator::parameters_t *generators;
+extern const pvGenerator::parameters_t *generator_by_name(const char *name);
 
 // Supported generators
 #define GEN_COUNT   3

@@ -27,11 +27,6 @@
 #define PVGEN_H
 #include <cmath>
 
-// Temporary code to prevent breaks
-#define pvgen_nameplate_parameters_t pvGenerator::nameplate_parameters_t
-#define pvgen_model_parameters_t     pvGenerator::model_parameters_t
-#define pvgen_parameters_t           pvGenerator::parameters_t
-
 class pvGenerator {
 public:
 	struct nameplate_parameters_t {

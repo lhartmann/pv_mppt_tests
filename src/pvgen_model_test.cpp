@@ -29,14 +29,14 @@
 
 using namespace std;
 
-int pvgen_model_test(const pvgen_parameters_t *genparam, const char *outfilename) {
+int pvgen_model_test(const pvGenerator::parameters_t *genparam, const char *outfilename) {
 	cout<<"Testing PV generator mathematical model..."<<endl;
 	
 	// Prepare generator model (use experimental model)
 	cout<<"Preparing PV generator models ("<<genparam->name<<")... "<<flush;
 	pvGenerator_sc fitted, nominal;
 	fitted.setModel(genparam->model);
-	pvgen_model_parameters_t m = pvgen_nominal_model(genparam->nameplate);
+	pvGenerator::model_parameters_t m = pvgen_nominal_model(genparam->nameplate);
 	
 // 	m.Iphr = 8.0210333509783;
 // 	m.Ior  = 1.2248535228464e-6;

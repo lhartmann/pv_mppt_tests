@@ -22,11 +22,11 @@
 
 #include "pvgen_models.h"
 
-inline pvgen_model_parameters_t pvgen_nominal_model(pvgen_nameplate_parameters_t n) {
+inline pvGenerator::model_parameters_t pvgen_nominal_model(pvGenerator::nameplate_parameters_t n) {
 	double k  = 1.3806504e-23;
 	double q  = 1.6021765e-19;
 	double Vt = k*n.Tr/q;
-	pvgen_model_parameters_t m;
+	pvGenerator::model_parameters_t m;
 	
 	m.Iph = n.Isc;
 	m.m   = (2*n.Vmp-n.Voc) / (Vt*std::log((m.Iph-n.Imp)/n.Isc) + (Vt*n.Imp)/(m.Iph-n.Imp));

@@ -26,6 +26,6 @@
 #include "pvgen.h"
 #include "pvgen_models.h"
 
-int pvgen_model_test(const pvgen_parameters_t *genparam, const char *outfilename);
+int pvgen_model_test(const pvGenerator::parameters_t *genparam, const char *outfilename);
 
 #endif
