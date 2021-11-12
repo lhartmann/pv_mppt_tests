@@ -44,7 +44,7 @@ public:
 		double Iph, I0, m, Rs, Rp, G, T;
 	};
 	struct parameters_t {
-		char *name;
+		const char *name;
 		nameplate_parameters_t nameplate;
 		model_parameters_t model;
 	};
