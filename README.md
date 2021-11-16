@@ -17,7 +17,7 @@ A set of programs to test PV modules and MPPT techniques. This set of programs w
 
 For the simulations you can use online IDEs, of which I recommend [gitpod](gitpod.io).
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](gitpod.io#github.com/lhartmann/pv_mppt_tests)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#github.com/lhartmann/pv_mppt_tests)
 
 * Click on the link above
 * Open a terminal with CTRL+`
