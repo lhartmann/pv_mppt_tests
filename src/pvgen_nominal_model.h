@@ -22,6 +22,9 @@
 
 #include "pvgen_models.h"
 
+// Approximate PV genenerator model based on nameplate data.
+// https://ieeexplore.ieee.org/document/4417684
+// DOI: 10.1109/EPE.2007.4417684
 inline pvGenerator::model_parameters_t pvgen_nominal_model(pvGenerator::nameplate_parameters_t n) {
 	double k  = 1.3806504e-23;
 	double q  = 1.6021765e-19;
